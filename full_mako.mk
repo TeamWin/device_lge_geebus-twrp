@@ -23,7 +23,7 @@ PRODUCT_COPY_FILES := device/sample/etc/apns-full-conf.xml:system/etc/apns-conf.
 # Inherit from the common Open Source product configuration
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-PRODUCT_NAME := full_geebus
+PRODUCT_NAME := cm_geebus
 PRODUCT_DEVICE := geebus
 PRODUCT_BRAND := Android
 PRODUCT_MODEL := Full JellyBean on Geebus

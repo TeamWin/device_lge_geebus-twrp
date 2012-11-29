@@ -15,4 +15,4 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/full_geebus.mk
+    $(LOCAL_DIR)/cm_geebus.mk
