@@ -25,11 +25,11 @@ ARCH_ARM_HAVE_TLS_REGISTER := true
 
 TARGET_NO_BOOTLOADER := true
 
-TARGET_PREBUILT_RECOVERY_KERNEL := device/lge/mako/kernel
+TARGET_PREBUILT_RECOVERY_KERNEL := device/lge/geebus/kernel
 BOARD_KERNEL_BASE := 0x80200000
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_FORCE_RAMDISK_ADDRESS := 0x81508000
-BOARD_KERNEL_CMDLINE := vmalloc=600M console=ttySHL0,115200,n8 lpj=67677 user_debug=31 msm_rtb.filter=0x0 ehci-hcd.park=3 androidboot.hardware=mako
+BOARD_KERNEL_CMDLINE := vmalloc=600M console=ttySHL0,115200,n8 lpj=67677 user_debug=31 msm_rtb.filter=0x0 ehci-hcd.park=3 androidboot.hardware=geebus
 BOARD_MKBOOTIMG_ARGS := --ramdisk_offset 0x01308000
 
 BOARD_USES_ALSA_AUDIO:= true
@@ -42,11 +42,11 @@ BLUETOOTH_HCI_USE_MCT := true
 
 TARGET_NO_RADIOIMAGE := true
 TARGET_BOARD_PLATFORM := msm8960
-TARGET_BOOTLOADER_BOARD_NAME := MAKO
-TARGET_BOOTLOADER_NAME=mako
-#TARGET_BOARD_INFO_FILE := device/lge/mako/board-info.txt
+TARGET_BOOTLOADER_BOARD_NAME := GEEBUS
+TARGET_BOOTLOADER_NAME=geebus
+#TARGET_BOARD_INFO_FILE := device/lge/geebus/board-info.txt
 
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/lge/mako/bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/lge/geebus/bluetooth
 
 # FIXME: HOSTAPD-derived wifi driver
 BOARD_HAS_QCOM_WLAN := true
@@ -59,7 +59,7 @@ BOARD_HOSTAPD_PRIVATE_LIB := lib_driver_cmd_$(BOARD_WLAN_DEVICE)
 WIFI_DRIVER_FW_PATH_STA := "sta"
 WIFI_DRIVER_FW_PATH_AP  := "ap"
 
-BOARD_EGL_CFG := device/lge/mako/egl.cfg
+BOARD_EGL_CFG := device/lge/geebus/egl.cfg
 
 #BOARD_USES_HGL := true
 #BOARD_USES_OVERLAY := true
@@ -70,7 +70,7 @@ TARGET_USES_SF_BYPASS := true
 TARGET_USES_C2D_COMPOSITON := true
 
 #TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
-#TARGET_RECOVERY_UI_LIB := librecovery_ui_mako
+#TARGET_RECOVERY_UI_LIB := librecovery_ui_geebus
 
 TARGET_USERIMAGES_USE_EXT4 := true
 BOARD_BOOTIMAGE_PARTITION_SIZE := 25165824 # 24M
@@ -85,21 +85,21 @@ BOARD_USES_SECURE_SERVICES := true
 BOARD_USES_EXTRA_THERMAL_SENSOR := true
 BOARD_USES_CAMERA_FAST_AUTOFOCUS := true
 
-BOARD_LIB_DUMPSTATE := libdumpstate.mako
+BOARD_LIB_DUMPSTATE := libdumpstate.geebus
 
 #BOARD_VENDOR_QCOM_GPS_LOC_API_HARDWARE := $(TARGET_BOARD_PLATFORM)
 TARGET_NO_RPC := true
 
-TARGET_RELEASETOOLS_EXTENSIONS := device/lge/mako
+TARGET_RELEASETOOLS_EXTENSIONS := device/lge/geebus
 
--include vendor/lge/mako/BoardConfigVendor.mk
+-include vendor/lge/geebus/BoardConfigVendor.mk
 
 #TWRP config
 DEVICE_RESOLUTION := 720x1280
 RECOVERY_SDCARD_ON_DATA := true
 RECOVERY_GRAPHICS_USE_LINELENGTH := true
 PRODUCT_BUILD_PROP_OVERRIDES += BUILD_UTC_DATE=0
-TARGET_RECOVERY_INITRC := device/lge/mako/init.rc
+TARGET_RECOVERY_INITRC := device/lge/geebus/init.rc
 #TW_INCLUDE_CRYPTO := true
 TW_INCLUDE_JB_CRYPTO := true
 TW_FLASH_FROM_STORAGE := true
